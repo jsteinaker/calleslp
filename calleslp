@@ -22,16 +22,25 @@ esDigito()
 #norteSur(), el cálculo para las paralelas a Av. 7
 norteSur()
 {
-	if [ $2 -lt 1 ] || [ $2 -gt 1949 ]
+	if [ $2 -lt 1 ] || [ $2 -gt 8799 ]
 	then
-		echo "La numeración de las calles norte-sur va desde 1 a 1949. Por favor, revise los datos y vuelva a intentarlo."
+		echo "La numeración de las calles norte-sur va desde 1 a 8799. Recuerde que si la dirección está ubicada en Tolosa, Ringuelet o alrededores, debe agregar una t antes del número de calle (t7 653, por ejemplo). Por favor, revise los datos y vuelva a intentarlo."
 	exit 1
 	fi
 	calle1=$(($2 / 50 + 32 ))
 	if [ $calle1 -gt 51 ]
 	then
 		calle1=$(($calle1 + 1))
-		calle2=$(($calle1 + 1))
+		if [ $calle1 -eq 99 ]
+		then
+			calle2=600
+		elif [ $calle1 -gt 99 ]
+		then
+			calle1=$(( $calle1 + 500))
+			calle2=$(( $calle1 + 1 ))
+		else
+			calle2=$(($calle1 + 1))
+		fi
 	elif [ $calle1 -eq 51 ]
 	then
 		calle2=53
