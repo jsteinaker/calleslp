@@ -167,9 +167,31 @@ tolosaNorteSur()
 }
 
 #tolosaEsteOeste(), el cálculo para las paralelas a Av. 32 en la zona de Tolosa y Ringuelet
-#tolosaEsteOeste()
-#{
-#}
+tolosaEsteOeste()
+{
+	if [ $2 -lt 1 ] || [ $2 -gt 15849 ]
+	then
+		echo "La numeración de las calles este-oeste va desde 1 a 15849. Por favor, revise los datos y vuelva a intentarlo."
+		exit 1
+		# Las direcciones menores a 300 quedan al este de calle 1. La numeración sigue por 115 (1, 115, 116 hacia el este), de aquí la complicada fórmula.
+	elif [ $2 -lt 300 ]
+	then
+		calle1=$(( -1 * $(($2 / 50 - 5)) + 115))
+		case $calle1 in
+			115)
+				calle2=1;;
+			*)
+				calle2=$(( $calle1 - 1));;
+		esac
+	elif [ $2 -lt 1800 ]
+	then
+		calle1=$(($2 / 50 - 5))
+		calle2=$(($calle1 + 1))
+	else
+		calle1=$(($2 / 50 - 5 + 100 ))
+		calle2=$(($calle1 + 1))
+	fi
+}
 
 #imprimir(), imprime el resultado
 imprimir()
@@ -216,6 +238,8 @@ else
 			esteOeste $1 $2;;
 		t[1-9]|t[12][0-9]|t3[01])
 			tolosaNorteSur $1 $2;;
+		t50[2-9]|t5[12][0-9]|t53[01])
+			tolosaEsteOeste $1 $2;;
 		*)
 			uso
 			exit 1;;
