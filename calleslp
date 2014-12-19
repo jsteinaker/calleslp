@@ -149,6 +149,28 @@ diagonales7778()
 	calle2=$(( $calle1 + 1))	
 }
 
+#tolosaNorteSur(), el cálculo para las paralelas a Av. 7 en la zona de Tolosa y Ringuelet
+tolosaNorteSur()
+{
+	if [ $2 -lt 0 ] || [ $2 -gt 2999 ]
+	then
+		echo "La altura especificada no existe. Por favor, revise los datos y vuelva a intentarlo."
+		exit 1
+	elif [ $2 -lt 100 ]
+	then
+		calle1=32
+		calle2=531
+	else
+		calle1=$(( 531 - $2 / 100 ))
+		calle2=$(( $calle1 + 1 ))
+	fi
+}
+
+#tolosaEsteOeste(), el cálculo para las paralelas a Av. 32 en la zona de Tolosa y Ringuelet
+#tolosaEsteOeste()
+#{
+#}
+
 #imprimir(), imprime el resultado
 imprimir()
 {
@@ -190,8 +212,10 @@ else
 			diagonales7778 $1 $2;;
 		[1-9]|[12][0-9]|3[01])
 			norteSur $1 $2;;
-		3[2-9]|[456][0-9]|7[012])
+		3[2-9]|[456789][0-9]|11[5-9]|120|6[0-9][0-9]|70[0-8])
 			esteOeste $1 $2;;
+		t[1-9]|t[12][0-9]|t3[01])
+			tolosaNorteSur $1 $2;;
 		*)
 			uso
 			exit 1;;
