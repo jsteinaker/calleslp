@@ -61,6 +61,7 @@ esteOeste()
 	then
 		echo "La numeración de las calles este-oeste va desde 1 a 15849. Por favor, revise los datos y vuelva a intentarlo."
 		exit 1
+		
 		# Las direcciones menores a 300 quedan al este de calle 1. La numeración sigue por 115 (1, 115, 116 hacia el este), de aquí la complicada fórmula.
 	elif [ $2 -lt 300 ]
 	then
@@ -183,6 +184,7 @@ tolosaEsteOeste()
 	then
 		echo "La numeración de las calles este-oeste va desde 1 a 15849. Por favor, revise los datos y vuelva a intentarlo."
 		exit 1
+		
 		# Las direcciones menores a 300 quedan al este de calle 1. La numeración sigue por 115 (1, 115, 116 hacia el este), de aquí la complicada fórmula.
 	elif [ $2 -lt 300 ]
 	then
@@ -235,6 +237,7 @@ then
 		uso
 		exit 1
 else
+# La selectora que deriva el cálculo a las diferentes funciones o sale si los argumentos no son válidos
 	case $1 in
 		d7[349]|d80)
 			diagonalesPrincipales $1 $2;;
