@@ -138,6 +138,11 @@ diagonalesPrincipales()
 #diagonales7576(), el cálculo para las diagonales 75 y 76
 diagonales7576()
 {
+	if [ $2 -lt 1 ] || [ $2 -gt 1099 ]
+	then
+		echo "La altura especificada no existe en esta diagonal. Por favor, revise los datos e inténtelo nuevamente."
+		exit 1
+	fi
 	calle1=$(( $2 / 100 + 14))
 	calle2=$(($calle1 + 1))
 }
@@ -145,6 +150,11 @@ diagonales7576()
 #diagonales7778(), el cálculo para las diagonales 77 y 78
 diagonales7778()
 {
+	if [ $2 -lt 1 ] || [ $2 -gt 1099 ]
+	then
+		echo "La altura especificada no existe en esta diagonal. Por favor, revise los datos e inténtelo nuevamente."
+		exit 1
+	fi
 	calle1=$(( $2 / 100 + 1))
 	calle2=$(( $calle1 + 1))	
 }
