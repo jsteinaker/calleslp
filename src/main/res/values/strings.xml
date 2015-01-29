@@ -3,4 +3,5 @@
 	<string name="app_name">Calles de La Plata</string>
 	<string name="calle_hint">Calle</string>
 	<string name="altura_hint">Altura</string>
+	<string name="resultado">Ingrese calle y altura"</string>
 </resources>
