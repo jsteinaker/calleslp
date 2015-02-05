@@ -18,18 +18,32 @@
 		android:inputType="number"
 		android:hint="@string/edt_altura"
 		/>
-	<CheckBox
-		android:id="@+id/chk_diagonal"
-		android:layout_width="fill_parent"
+	<RadioGroup
+		android:id="@+id/rbtn_tipo_direccion"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/chk_diagonal"
+		android:orientation="vertical"	>
+
+		<RadioButton
+			android:id="@+id/rbtn_laplata"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/rbtn_laplata"
+			android:checked="true"
 		/>
-	<CheckBox
-		android:id="@+id/chk_tolosa"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/chk_tolosa"
+		<RadioButton
+			android:id="@+id/rbtn_diagonal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/rbtn_diagonal"
 		/>
+		<RadioButton
+			android:id="@+id/rbtn_tolosa"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/rbtn_tolosa"
+			/>
+	</RadioGroup>
 	<Button
 		android:id="@+id/btn_calcular"
 		android:layout_width="wrap_content"

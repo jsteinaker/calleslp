@@ -3,8 +3,9 @@
 	<string name="app_name">Calles de La Plata</string>
 	<string name="edt_calle">Calle</string>
 	<string name="edt_altura">Altura</string>
-	<string name="chk_diagonal">¿Diagonal?</string>
-	<string name="chk_tolosa">¿En Tolosa o Ringuelet?</string>
+	<string name="rbtn_laplata">La Plata</string>
+	<string name="rbtn_diagonal">La Plata (Diagonal)</string>
+	<string name="rbtn_tolosa">Tolosa/Ringuelet</string>
 	<string name="btn_calcular">Calcular</string>
 	<string name="txt_resultado">Ingrese calle y altura"</string>
 </resources>
