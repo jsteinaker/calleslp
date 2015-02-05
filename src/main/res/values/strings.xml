@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">Calles de La Plata</string>
-	<string name="calle_hint">Calle</string>
-	<string name="altura_hint">Altura</string>
-	<string name="checkbox_diagonal">¿Diagonal?</string>
-	<string name="checkbox_tolosa">¿En Tolosa o Ringuelet?</string>
-	<string name="calcular">Calcular</string>
-	<string name="resultado">Ingrese calle y altura"</string>
+	<string name="edt_calle">Calle</string>
+	<string name="edt_altura">Altura</string>
+	<string name="chk_diagonal">¿Diagonal?</string>
+	<string name="chk_tolosa">¿En Tolosa o Ringuelet?</string>
+	<string name="btn_calcular">Calcular</string>
+	<string name="txt_resultado">Ingrese calle y altura"</string>
 </resources>
