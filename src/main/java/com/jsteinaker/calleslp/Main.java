@@ -12,4 +12,9 @@ public class Main extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
+
+	/** Llamada cuando se presiona el botón Calcular */
+	public void calcular(View view)
+	{
+	}
 }
