@@ -10,31 +10,37 @@
 		android:layout_height="wrap_content"
 		android:inputType="number"
 		android:hint="@string/calle_hint"
-	/>
+		/>
 	<EditText
 		android:id="@+id/altura"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:inputType="number"
 		android:hint="@string/altura_hint"
-	/>
+		/>
 	<CheckBox
 		android:id="@+id/diagonal"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/checkbox_diagonal"
-	/>
+		/>
 	<CheckBox
 		android:id="@+id/tolosa"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/checkbox_tolosa"
-	/>
+		/>
+	<Button
+		android:id="@+id/calcular"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/calcular"
+		/>
 	<TextView
 		android:id="@+id/resultado"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/resultado"
-	/>
+		/>
 </LinearLayout>
 

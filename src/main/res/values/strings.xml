@@ -5,5 +5,6 @@
 	<string name="altura_hint">Altura</string>
 	<string name="checkbox_diagonal">¿Diagonal?</string>
 	<string name="checkbox_tolosa">¿En Tolosa o Ringuelet?</string>
-	<string name="resultado"><big>Ingrese calle y altura"</big></string>
+	<string name="calcular">Calcular</string>
+	<string name="resultado">Ingrese calle y altura"</string>
 </resources>
