@@ -19,4 +19,7 @@ public abstract class Calle {
 			return new TolosaEsteOeste(calle);
 		}
 	}
+
+	public int chequearLimites(int altura) {
+	}
 }
