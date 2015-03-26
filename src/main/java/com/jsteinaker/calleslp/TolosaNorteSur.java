@@ -5,11 +5,11 @@ public final class TolosaNorteSur extends NorteSur {
 	public int chequearLimites(int altura) {
 		if (altura < 1) || (altura > 2999)
 		{
-			return 1
+			return 1;
 		}
 		else
 		{
-			return 0
+			return 0;
 		}
 	}
 
