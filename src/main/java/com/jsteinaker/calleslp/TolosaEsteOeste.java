@@ -1,9 +1,14 @@
-package com.jsteinaker.calleslp
+package com.jsteinaker.calleslp;
 
-public final class TolosaEsteOeste extends EsteOeste {
+public final class TolosaEsteOeste extends Calle {
+
+	//Constructor
+	public TolosaEsteOeste(int calle)
+	{
+	}
 
 	public int chequearLimites(int altura) {
-		if (altura < 1) || (altura > 15849)
+		if ((altura < 1) || (altura > 15849))
 		{
 			return 1;
 		}
