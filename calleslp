@@ -125,7 +125,7 @@ diagonalesPrincipales()
 			*)
 				calle2=$(( $calle1 - 1 ));;
 		esac
-	elif [ $2 -lt 3599 ]
+	elif [ $2 -lt 3600 ]
 	then
 		calle1=$(( $2 / 100 - 5))
 		calle2=$(($calle1 + 1))
