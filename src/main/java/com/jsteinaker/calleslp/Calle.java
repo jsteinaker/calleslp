@@ -29,7 +29,6 @@ public abstract class Calle {
 		}
 	}
 
-	public int chequearLimites(int altura) {
-		return 0;
-	}
+	public abstract boolean chequearLimites(int altura);
+
 }

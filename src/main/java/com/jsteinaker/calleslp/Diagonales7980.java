@@ -7,15 +7,15 @@ public class Diagonales7980 extends DiagonalesPrincipales {
 	{
 	}
 
-	public int chequearLimites(int altura)
+	public boolean chequearLimites(int altura)
 	{
 		if ((altura < 1) || (altura > 999))
 		{
-			return 1;
+			return false;
 		}
 		else
 		{
-			return 0;
+			return true;
 		}
 	}
 
