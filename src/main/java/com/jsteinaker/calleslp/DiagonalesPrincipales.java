@@ -1,13 +1,13 @@
 package com.jsteinaker.calleslp;
 
-public class DiagonalesPrincipales extends Calle {
+public abstract class DiagonalesPrincipales extends Calle {
 
 	//Constructor
 	public DiagonalesPrincipales(int calle)
 	{
 	}
 
-	public int chequearLimites(int altura)
+	public abstract int chequearLimites(int altura)
 	{
 	}
 

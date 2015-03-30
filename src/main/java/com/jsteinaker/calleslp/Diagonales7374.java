@@ -1,4 +1,4 @@
-package com.jsteinaker.calleslp
+package com.jsteinaker.calleslp;
 
 public class Diagonales7374 extends DiagonalesPrincipales {
 
