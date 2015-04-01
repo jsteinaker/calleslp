@@ -3,6 +3,7 @@ package com.jsteinaker.calleslp;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
@@ -21,6 +22,10 @@ public class Main extends Activity
 	{	
 		char checkbox;
 		Calle calleIngresada;
+		Resultado resultado;
+
+		// Asociamos el TextView, lo necesitaremos para mostrar resultados o errores.
+		TextView textView = (TextView) findViewById(R.id.txt_resultado);
 
 		// Obtenemos calle
 		EditText editText = (EditText) findViewById(R.id.edt_calle);
@@ -47,7 +52,19 @@ public class Main extends Activity
 			checkbox = '0';
 		}
 
+		// Al derivador, que crea un objeto de distinta clase de acuerdo al tipo de calle
 		calleIngresada = Calle.tipoCalle(numerocalle, checkbox);
 
+		if (calleIngresada.chequearLimites(alturacalle))
+		{
+			resultado = calleIngresada.calcular(numerocalle, alturacalle);
+			textView.setText(numerocalle + " queda entre " + resultado.getEsquina1() + " y " + resultado.getEsquina2());	
+		}
+		else
+		{
+			textView.setText("La altura no existe en la calle especificada. Por favor, cheque los datos e intente nuevamente.");	
+		}
+
 	}
+
 }

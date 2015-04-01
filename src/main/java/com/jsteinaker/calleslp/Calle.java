@@ -70,4 +70,6 @@ public abstract class Calle {
 
 	public abstract boolean chequearLimites(int altura);
 
+	public abstract Resultado calcular(int calle, int altura);
+
 }
