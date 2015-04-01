@@ -62,7 +62,20 @@ public class Main extends Activity
 		else if (calleIngresada.chequearLimites(alturacalle))
 		{
 			resultado = calleIngresada.calcular(numerocalle, alturacalle);
-			textView.setText(numerocalle + " N°" + alturacalle + " queda entre " + resultado.getEsquina1() + " y " + resultado.getEsquina2());	
+
+			// Excepciones para las calles 51, 52 y 53, que se comportan de manera distinta.
+			if ((resultado.getEsquina1() == -51) || (resultado.getEsquina1() == -53))
+			{
+				textView.setText("La calle " + numerocalle + " sólo existe entre las calles 1 y 31 (numeración entre 300 y 1799).");
+			}
+			else if (resultado.getEsquina1() == -52)
+			{
+				textView.setText("La calle 52 no existe entre las calles 1 y 27 (numeración entre 300 y 1599).");
+			}
+			else
+			{
+				textView.setText(numerocalle + " N°" + alturacalle + " queda entre " + resultado.getEsquina1() + " y " + resultado.getEsquina2());	
+			}
 		}
 		else
 		{
