@@ -54,11 +54,15 @@ public class Main extends Activity
 
 		// Al derivador, que crea un objeto de distinta clase de acuerdo al tipo de calle
 		calleIngresada = Calle.tipoCalle(numerocalle, checkbox);
-
-		if (calleIngresada.chequearLimites(alturacalle))
+		
+		if (calleIngresada == null)
+		{
+			textView.setText("La calle ingresada no existe. Por favor, verifique los datos e intente nuevamente.");
+		}
+		else if (calleIngresada.chequearLimites(alturacalle))
 		{
 			resultado = calleIngresada.calcular(numerocalle, alturacalle);
-			textView.setText(numerocalle + " queda entre " + resultado.getEsquina1() + " y " + resultado.getEsquina2());	
+			textView.setText(numerocalle + " N°" + alturacalle + " queda entre " + resultado.getEsquina1() + " y " + resultado.getEsquina2());	
 		}
 		else
 		{
