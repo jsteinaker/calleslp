@@ -7,5 +7,7 @@
 	<string name="rbtn_diagonal">La Plata (Diagonal)</string>
 	<string name="rbtn_tolosa">Tolosa/Ringuelet</string>
 	<string name="btn_calcular">Calcular</string>
+	<string name="btn_ayuda">Ayuda</string>
 	<string name="txt_resultado">Ingrese calle y altura"</string>
+	<string name="txt_ayuda">Recuerde seleccionar la opción "La Plata (Diagonal)" si efectivamente se trata de este tipo de calle, ya que los números utilizados para las diagonales (73, 74, etc.) también se utilizan para las calles este-oeste. De forma parecida, en Tolosa y Ringuelet la numeración de las calles norte-sur (como Av. 7) vuelve a comenzar en 0, y por tanto es necesario indicar si la dirección que buscamos está en alguna de estas localidades. Para las calles este-oeste en esta zona (como Av. 520) esto no es necesario, pues la numeración no se superpone.</string>
 </resources>
