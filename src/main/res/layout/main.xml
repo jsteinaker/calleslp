@@ -4,20 +4,30 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
     >
-	<EditText
-		android:id="@+id/edt_calle"
+	<LinearLayout
+		android:id="@+id/entrada"
+		android:orientation="horizontal"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:inputType="number"
-		android:hint="@string/edt_calle"
-		/>
-	<EditText
-		android:id="@+id/edt_altura"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:inputType="number"
-		android:hint="@string/edt_altura"
-		/>
+		>
+		
+		<EditText
+			android:id="@+id/edt_calle"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:inputType="number"
+			android:hint="@string/edt_calle"
+			/>
+		<EditText
+			android:id="@+id/edt_altura"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:inputType="number"
+			android:hint="@string/edt_altura"
+			/>
+	</LinearLayout>	
 	<RadioGroup
 		android:id="@+id/rbtn_tipo_direccion"
 		android:layout_width="wrap_content"
@@ -71,6 +81,7 @@
 		android:id="@+id/txt_resultado"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:textSize="20sp"
 		android:text="@string/txt_resultado"
 		/>
 </LinearLayout>

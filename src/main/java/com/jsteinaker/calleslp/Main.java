@@ -78,7 +78,7 @@ public class Main extends Activity
 		
 			if (calleIngresada == null)
 			{
-				textView.setText("La calle ingresada no existe. Por favor, verifique los datos e intente nuevamente.");
+				textView.setText(R.string.errorcalle);
 			}
 			else if (calleIngresada.chequearLimites(alturacalle))
 			{
@@ -91,7 +91,7 @@ public class Main extends Activity
 				}
 				else if (resultado.getEsquina1() == -52)
 				{
-					textView.setText("La calle 52 no existe entre las calles 1 y 27 (numeración entre 300 y 1599).");
+					textView.setText(R.string.error52);
 				}
 				else
 				{
@@ -100,7 +100,7 @@ public class Main extends Activity
 			}
 			else
 			{
-				textView.setText("La altura no existe en la calle especificada. Por favor, cheque los datos e intente nuevamente.");	
+				textView.setText(R.string.erroraltura);
 			}
 
 	}
